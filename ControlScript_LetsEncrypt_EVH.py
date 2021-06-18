@@ -4,10 +4,11 @@ Modified https://github.com/diafygi/acme-tiny/blob/master/acme_tiny.py for Avi C
 
 '''
 Parameters -
-    user            - Avi user name
-    password        - Password of the above user
-    tenant          - Avi tenant name
+    user            - Avi user name (REQUIRED)
+    password        - Password of the above user (REQUIRED)
+    tenant          - Avi tenant name (REQUIRED)
     dryrun          - True/False. If True letsencrypt's staging server will be used.
+    parentVS        - The Parent VS name (REQUIRED)
 
 Useful links -
     Ratelimiting - https://letsencrypt.org/docs/rate-limits/
@@ -177,9 +178,9 @@ def get_crt(user, password, tenant, api_version, csr, CA=DEFAULT_CA, disable_che
         if rsp["count"] == 0:
             raise Exception("Could not find a VS with name = {}".format(domain))
         vs_uuid = rsp["results"][0]["uuid"]
-        rsp = _do_request_avi("virtualservice?search=(name,{})".format("VS-PARENT"), "GET").json()
+        rsp = _do_request_avi("virtualservice?search=(name,{})".format(parentVS), "GET").json()
         if rsp["count"] == 0:
-           raise Exception("Could not find VS-PARENT")
+           raise Exception("Could not find parent VS with name = {}".format(parentVS))
         vs_parent_uuid = rsp["results"][0]["uuid"]
         # Check if the vs is servering on port 80
         serving_on_port_80 = False
