@@ -25,7 +25,7 @@ DEFAULT_DIRECTORY_URL = "https://acme-v02.api.letsencrypt.org/directory"
 DEFAULT_STAGING_DIRECTORY_URL = "https://acme-staging-v02.api.letsencrypt.org/directory"
 ACCOUNT_KEY_PATH = "/var/lib/avi/ca/private/letsencrypt.key"
 
-def get_crt(user, password, tenant, api_version, csr, CA=DEFAULT_CA, disable_check=False, directory_url=DEFAULT_DIRECTORY_URL, contact=None):
+def get_crt(user, password, tenant, parentVS, api_version, csr, CA=DEFAULT_CA, disable_check=False, directory_url=DEFAULT_DIRECTORY_URL, contact=None):
     directory, acct_headers, alg, jwk = None, None, None, None # global variables
 
     # helper functions - base64 encode for jose spec
