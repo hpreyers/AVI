@@ -289,6 +289,7 @@ def certificate_request(csr, common_name, kwargs):
     password = kwargs.get('password', None)
     tenant = kwargs.get('tenant', '*')
     dry_run = kwargs.get('dryrun', '')
+    parentVS = kwargs.get('parentVS', None)
     contact = kwargs.get('contact', None)
     api_version = kwargs.get('api_version', '20.1.1')
 
@@ -309,7 +310,7 @@ def certificate_request(csr, common_name, kwargs):
 
     signed_crt = None
     try:
-        signed_crt = get_crt(user, password, tenant, api_version, csr_temp_file.name, directory_url=directory_url, contact=contact)
+        signed_crt = get_crt(user, password, tenant, parentVS, api_version, csr_temp_file.name, directory_url=directory_url, contact=contact)
     finally:
         os.remove(csr_temp_file.name)
 
