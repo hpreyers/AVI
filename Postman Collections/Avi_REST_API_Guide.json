@@ -85,7 +85,7 @@
           "response": []
         },
         {
-          "name": "Get Virtual Services Copy",
+          "name": "Get Virtual Services - Name",
           "id": "ae325975-1c31-4c78-9782-e7d1b3bb191a",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
