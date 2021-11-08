@@ -72,11 +72,6 @@
                 "key": "Content-Type",
                 "value": "application/json",
                 "disabled": true
-              },
-              {
-                "key": "//Content-Type",
-                "value": "application/json",
-                "disabled": true
               }
             ],
             "body": {
@@ -88,24 +83,7 @@
                 }
               }
             },
-            "url": {
-              "raw": "https://{{cntrl_ip}}/api/virtualservice?Name=\t\nWEBSITES-WORDPRESS",
-              "protocol": "https",
-              "host": [
-                "{{cntrl_ip}}"
-              ],
-              "path": [
-                "api",
-                "virtualservice"
-              ],
-              "query": [
-                {
-                  "key": "Name",
-                  "value": "\t\nWEBSITES-WORDPRESS",
-                  "type": "text"
-                }
-              ]
-            },
+            "url": "https://{{cntrl_ip}}/api/virtualservice",
             "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
           },
           "response": []
