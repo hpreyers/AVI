@@ -130,7 +130,24 @@
                 "disabled": true
               }
             ],
-            "url": "https://{{cntrl_ip}}/api/virtualservice",
+            "url": {
+              "raw": "https://{{cntrl_ip}}/api/virtualservice?Name=WEBSITES-WORDPRESS",
+              "protocol": "https",
+              "host": [
+                "{{cntrl_ip}}"
+              ],
+              "path": [
+                "api",
+                "virtualservice"
+              ],
+              "query": [
+                {
+                  "key": "Name",
+                  "value": "WEBSITES-WORDPRESS",
+                  "type": "text"
+                }
+              ]
+            },
             "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
           },
           "response": []
