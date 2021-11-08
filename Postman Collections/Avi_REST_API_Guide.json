@@ -153,6 +153,48 @@
           "response": []
         },
         {
+          "name": "Get Virtual Services - Name Copy",
+          "id": "19585913-f3a3-4482-848f-9485e2b002d4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "https://{{cntrl_ip}}/api/virtualservice?Name=WEBSITES-WORDPRESS",
+              "protocol": "https",
+              "host": [
+                "{{cntrl_ip}}"
+              ],
+              "path": [
+                "api",
+                "virtualservice"
+              ],
+              "query": [
+                {
+                  "key": "Name",
+                  "value": "WEBSITES-WORDPRESS",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
+          },
+          "response": []
+        },
+        {
           "name": "Get Pools",
           "id": "e4ff4824-cf84-4d1e-95d9-d80ab6139cd7",
           "protocolProfileBehavior": {
@@ -243,48 +285,6 @@
             },
             "url": "https://{{cntrl_ip}}:{{port}}/api/virtualservice/",
             "description": "Create a Virtualservice and assign the previously created pool to the VS.\n\nNote that the Pool reference is not mandatory for creating the VS."
-          },
-          "response": []
-        },
-        {
-          "name": "Get Virtual Services - Name Copy",
-          "id": "19585913-f3a3-4482-848f-9485e2b002d4",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "disabled": true
-              },
-              {
-                "key": "//Content-Type",
-                "value": "application/json",
-                "disabled": true
-              }
-            ],
-            "url": {
-              "raw": "https://{{cntrl_ip}}/api/virtualservice?Name=WEBSITES-WORDPRESS",
-              "protocol": "https",
-              "host": [
-                "{{cntrl_ip}}"
-              ],
-              "path": [
-                "api",
-                "virtualservice"
-              ],
-              "query": [
-                {
-                  "key": "Name",
-                  "value": "WEBSITES-WORDPRESS",
-                  "type": "text"
-                }
-              ]
-            },
-            "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
           },
           "response": []
         }
