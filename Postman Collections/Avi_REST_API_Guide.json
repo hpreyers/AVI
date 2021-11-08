@@ -43,7 +43,7 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "usernam",
+                  "key": "username",
                   "value": "{{cntrl_username}}",
                   "type": "text"
                 },
