@@ -89,7 +89,7 @@
           "response": []
         },
         {
-          "name": "Get HTTP Policies",
+          "name": "Get Virtual Services Copy",
           "id": "95e09c6f-16ec-4624-a584-be82aaf4ea68",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
