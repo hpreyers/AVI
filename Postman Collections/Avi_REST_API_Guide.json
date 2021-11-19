@@ -89,7 +89,7 @@
           "response": []
         },
         {
-          "name": "Get Virtual Services Copy",
+          "name": "Get HTTP Policies",
           "id": "95e09c6f-16ec-4624-a584-be82aaf4ea68",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -292,6 +292,35 @@
             },
             "url": "https://{{cntrl_ip}}:{{port}}/api/virtualservice/",
             "description": "Create a Virtualservice and assign the previously created pool to the VS.\n\nNote that the Pool reference is not mandatory for creating the VS."
+          },
+          "response": []
+        },
+        {
+          "name": "Get HTTP Policies Copy",
+          "id": "82bcc1db-3576-4e3e-8361-7aeebceffc4e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://{{cntrl_ip}}/api/virtualservice",
+            "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
           },
           "response": []
         }
