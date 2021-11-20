@@ -323,6 +323,35 @@
             "description": "Create a Virtualservice and assign the previously created pool to the VS.\n\nNote that the Pool reference is not mandatory for creating the VS."
           },
           "response": []
+        },
+        {
+          "name": "Get HTTP Policies Copy",
+          "id": "ef519047-3c68-4aba-81c6-df05b8e97a4a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://{{cntrl_ip}}/api/virtualservice",
+            "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
+          },
+          "response": []
         }
       ],
       "id": "88d5fd3b-8b56-49d6-bc26-2bb496f881f3"
