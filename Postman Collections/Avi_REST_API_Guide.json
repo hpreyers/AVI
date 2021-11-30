@@ -147,6 +147,35 @@
           "response": []
         },
         {
+          "name": "Get HTTP Policy",
+          "id": "82bcc1db-3576-4e3e-8361-7aeebceffc4e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://{{cntrl_ip}}/api/virtualservice",
+            "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
+          },
+          "response": []
+        },
+        {
           "name": "Get HTTP Policy Copy",
           "id": "f33badab-ff09-487a-aa13-2cb9c86e6850",
           "protocolProfileBehavior": {
@@ -426,35 +455,6 @@
             },
             "url": "https://{{cntrl_ip}}:{{port}}/api/virtualservice/{{uuid_vs_mod}}",
             "description": "Create a Virtualservice and assign the previously created pool to the VS.\n\nNote that the Pool reference is not mandatory for creating the VS."
-          },
-          "response": []
-        },
-        {
-          "name": "Get HTTP Policy",
-          "id": "82bcc1db-3576-4e3e-8361-7aeebceffc4e",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "https://{{cntrl_ip}}/api/virtualservice",
-            "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
           },
           "response": []
         }
