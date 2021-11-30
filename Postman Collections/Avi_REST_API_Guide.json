@@ -147,8 +147,8 @@
           "response": []
         },
         {
-          "name": "Get HTTP Policy",
-          "id": "82bcc1db-3576-4e3e-8361-7aeebceffc4e",
+          "name": "Get HTTP Policy Copy",
+          "id": "f33badab-ff09-487a-aa13-2cb9c86e6850",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -391,6 +391,35 @@
             },
             "url": "https://{{cntrl_ip}}:{{port}}/api/pool/{(uuid_pool_mod}}",
             "description": "To Modify the Pool created earlier. The URL changes to include the UUID.\n\nThe Name of the pool is mandatory.\n\nReplace {{uuid_pool_mod}} with the UUID of the pool that needs to be modified."
+          },
+          "response": []
+        },
+        {
+          "name": "Get HTTP Policy",
+          "id": "82bcc1db-3576-4e3e-8361-7aeebceffc4e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://{{cntrl_ip}}/api/virtualservice",
+            "description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
           },
           "response": []
         },
