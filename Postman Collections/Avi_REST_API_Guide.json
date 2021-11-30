@@ -54,7 +54,23 @@
                 }
               ]
             },
-            "url": "https://{{cntrl_ip}}/login",
+            "url": {
+              "raw": "https://{{cntrl_ip}}/login",
+              "protocol": "https",
+              "host": [
+                "{{cntrl_ip}}"
+              ],
+              "path": [
+                "login"
+              ],
+              "query": [
+                {
+                  "key": "AVI_API_VERSION",
+                  "value": "{{ctrl_API_version}}",
+                  "disabled": true
+                }
+              ]
+            },
             "description": "Login to the Avi Controller. When Basic Authentication is disallowed, the login is done by providing the \"username\" and \"password\" fields in the Body as Form-Data.\n\nThe Response in case of successfull authentication is a 200 OK status with a possible body containing some administrative settings."
           },
           "response": []
