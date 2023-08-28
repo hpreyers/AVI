@@ -314,26 +314,26 @@
 								"disabled": true
 							},
 							{
-								"key": "//Content-Type",
-								"value": "application/json",
-								"disabled": true
+								"key": "AVI_API_VERSION",
+								"value": "{{AVI_API_VERSION}}",
+								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://{{cntrl_ip}}/api/virtualservice?Name=WEBSITES-WORDPRESS",
+							"raw": "https://{{cntrl_ip}}/api/virtualservice/?uuid=virtualservice-e3c996c7-553c-41b0-ba47-5fca9748336d",
 							"protocol": "https",
 							"host": [
 								"{{cntrl_ip}}"
 							],
 							"path": [
 								"api",
-								"virtualservice"
+								"virtualservice",
+								""
 							],
 							"query": [
 								{
-									"key": "Name",
-									"value": "WEBSITES-WORDPRESS",
-									"type": "text"
+									"key": "uuid",
+									"value": "virtualservice-e3c996c7-553c-41b0-ba47-5fca9748336d"
 								}
 							]
 						},
