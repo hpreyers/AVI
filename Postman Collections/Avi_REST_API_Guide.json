@@ -522,6 +522,19 @@
 						"url": "https://10.10.4.166/api/httppolicyset/httppolicyset-4d3c02a6-93ef-4a10-b1db-92f8409579b9"
 					},
 					"response": []
+				},
+				{
+					"name": "https://10.10.4.166/api/httppolicyset/httppolicyset-4d3c02a6-93ef-4a10-b1db-92f8409579b9",
+					"id": "5e0886bb-a521-4c61-878a-155cd5f2fdbd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://10.10.4.166/api/httppolicyset/httppolicyset-4d3c02a6-93ef-4a10-b1db-92f8409579b9"
+					},
+					"response": []
 				}
 			],
 			"id": "88d5fd3b-8b56-49d6-bc26-2bb496f881f3"
