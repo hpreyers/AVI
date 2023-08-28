@@ -106,7 +106,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -123,7 +123,7 @@
 								}
 							}
 						},
-						"url": "https://{{cntrl_ip}}/api/virtualservice",
+						"url": "https://{{cntrl_ip}}/api/virtualservice/",
 						"description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
 					},
 					"response": []
