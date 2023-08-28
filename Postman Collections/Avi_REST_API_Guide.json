@@ -362,20 +362,20 @@
 							}
 						],
 						"url": {
-							"raw": "https://{{cntrl_ip}}/api/virtualservice?Name=WEBSITES-WORDPRESS",
+							"raw": "https://{{cntrl_ip}}/api/virtualservice/?search=(name,blog.vconsultants.be)",
 							"protocol": "https",
 							"host": [
 								"{{cntrl_ip}}"
 							],
 							"path": [
 								"api",
-								"virtualservice"
+								"virtualservice",
+								""
 							],
 							"query": [
 								{
-									"key": "Name",
-									"value": "WEBSITES-WORDPRESS",
-									"type": "text"
+									"key": "search",
+									"value": "(name,blog.vconsultants.be)"
 								}
 							]
 						},
