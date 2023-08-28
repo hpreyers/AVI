@@ -91,6 +91,30 @@
 							}
 						],
 						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "https://{{cntrl_ip}}/api/virtualservice",
+						"description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Virtual Services Copy",
+					"id": "9ba04d0d-a973-4120-b759-3c7280f64a75",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
 							"mode": "raw",
 							"raw": "",
 							"options": {
@@ -278,6 +302,90 @@
 				{
 					"name": "Get vsvip - test",
 					"id": "6be691e3-4558-47fe-8c48-25bf8f29f306",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{cntrl_ip}}/api/virtualservice?Name=WEBSITES-WORDPRESS",
+							"protocol": "https",
+							"host": [
+								"{{cntrl_ip}}"
+							],
+							"path": [
+								"api",
+								"virtualservice"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": "WEBSITES-WORDPRESS",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
+					},
+					"response": []
+				},
+				{
+					"name": "Get vsvip - test Copy",
+					"id": "a00d5e49-c2fd-4512-b7da-913fdba4246e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://{{cntrl_ip}}/api/virtualservice?Name=WEBSITES-WORDPRESS",
+							"protocol": "https",
+							"host": [
+								"{{cntrl_ip}}"
+							],
+							"path": [
+								"api",
+								"virtualservice"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": "WEBSITES-WORDPRESS",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
+					},
+					"response": []
+				},
+				{
+					"name": "Get vsvip - test Copy",
+					"id": "86d925d6-8b2a-4f7a-995d-156cd53c60a8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
