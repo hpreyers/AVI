@@ -593,7 +593,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "DELETE",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -610,7 +610,7 @@
 								}
 							}
 						},
-						"url": "https://{{cntrl_ip}}/api/httppolicyset/blog.vconsultants.be-LetsEncryptHTTPpolicy",
+						"url": "https://{{cntrl_ip}}/api/L4PolicySet/",
 						"description": "Get all Virtual Services present on this Controller.\n\nReturn : Json"
 					},
 					"response": []
