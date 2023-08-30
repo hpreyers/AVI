@@ -74,6 +74,46 @@
 					"response": []
 				},
 				{
+					"name": "Logout from NSX ALB Controller",
+					"id": "acc0d9f6-87a1-437c-836a-1f3317407319",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Referer",
+								"value": "https://{{cntrl_ip}}:{{port}}/"
+							},
+							{
+								"key": "X-CSRFToken",
+								"value": "{{X-CSRFToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"abhinav-test-pool4\",\r\n\"servers\" : [ {\"ip\" : {\"addr\": \"1.1.1.1\",\"type\":\"V4\"}},{\"ip\": {\"addr\":\"1.1.1.2\",\"type\":\"V4\"}}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://{{cntrl_ip}}:{{port}}/api/pool",
+						"description": "Create a Pool to be used infor creating a Virtual Service.\n\nThis might fail if the pool already exists - in that case, please change the name of the pool."
+					},
+					"response": []
+				},
+				{
 					"name": "Get Virtual Services",
 					"id": "80bd64a3-8d31-4fad-86b9-3baccc677ed3",
 					"protocolProfileBehavior": {
@@ -446,6 +486,46 @@
 				{
 					"name": "Create Pool",
 					"id": "5de3b4c6-ff61-4b14-a79c-04e4279a063d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Referer",
+								"value": "https://{{cntrl_ip}}:{{port}}/"
+							},
+							{
+								"key": "X-CSRFToken",
+								"value": "{{X-CSRFToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"abhinav-test-pool4\",\r\n\"servers\" : [ {\"ip\" : {\"addr\": \"1.1.1.1\",\"type\":\"V4\"}},{\"ip\": {\"addr\":\"1.1.1.2\",\"type\":\"V4\"}}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://{{cntrl_ip}}:{{port}}/api/pool",
+						"description": "Create a Pool to be used infor creating a Virtual Service.\n\nThis might fail if the pool already exists - in that case, please change the name of the pool."
+					},
+					"response": []
+				},
+				{
+					"name": "Enable Server Globally",
+					"id": "7b9c9477-2053-481b-a57e-169fdee9262a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
