@@ -14,13 +14,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "937eb239-0d1e-402c-b99c-60b06921bd9e",
+								"id": "af748541-5c95-4c3d-9c39-b50d61c9668d",
 								"exec": [
 									"var token1 = postman.getResponseCookie(\"csrftoken\").value;\r",
 									"var token2 = token1.replace(\"<br/>\",\"\");\r",
 									"postman.setEnvironmentVariable(\"X-CSRFToken\", token2);\r",
-									"\r",
-									"\r",
 									""
 								],
 								"type": "text/javascript"
