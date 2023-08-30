@@ -418,6 +418,48 @@
 					"response": []
 				},
 				{
+					"name": "Get Pools Copy",
+					"id": "a6dfce05-73e4-4e6b-a2e1-69d91c07f3f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://{{cntrl_ip}}/api/pool",
+						"description": "Get a list of all the Pools available."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pools Copy 2",
+					"id": "21dabfc1-b9ff-4af0-8a58-15e48e03560b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://{{cntrl_ip}}/api/pool",
+						"description": "Get a list of all the Pools available."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pool members",
+					"id": "376f6a77-995c-45d7-bfd3-daf8465f0970",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://{{cntrl_ip}}/api/pool",
+						"description": "Get a list of all the Pools available."
+					},
+					"response": []
+				},
+				{
 					"name": "Create Pool",
 					"id": "5de3b4c6-ff61-4b14-a79c-04e4279a063d",
 					"protocolProfileBehavior": {
