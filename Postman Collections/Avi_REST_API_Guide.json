@@ -92,7 +92,7 @@
 							},
 							{
 								"key": "Referer",
-								"value": "https://{{cntrl_ip}}:{{port}}/"
+								"value": "https://{{cntrl_ip}}/"
 							},
 							{
 								"key": "X-CSRFToken",
@@ -108,7 +108,7 @@
 								}
 							}
 						},
-						"url": "https://{{cntrl_ip}}:{{port}}/api/pool",
+						"url": "https://{{cntrl_ip}}/logout",
 						"description": "Create a Pool to be used infor creating a Virtual Service.\n\nThis might fail if the pool already exists - in that case, please change the name of the pool."
 					},
 					"response": []
